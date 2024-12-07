@@ -14,7 +14,7 @@ use crate::image::Image; // use from another module
 pub fn save_to_file(image: &Image, filename: &str) {
     let mut s = String::new();
     s.push_str(&format!("P3\n{} {}\n255\n", image.width, image.height));
-    
+
     for y in 0..image.height {
         for x in 0..image.width {
             let pixel = image.get(x, y).unwrap();
